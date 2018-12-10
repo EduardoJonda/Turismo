@@ -18,33 +18,87 @@
                 <div class="container shape-container d-flex">
                     <div class="col px-0">
                         <div class="row">
-                            <div class="col-lg-6">
-                                <h1 class="display-3  text-white">A beautiful Design System
-                                    <span>completed with examples</span>
+                            <div class="col-lg-8">
+                                <h1 class="display-3  text-white">Realiza tu búsqueda de acuerdo a tus preferencias
                                 </h1>
-                                <p class="lead  text-white">ign systan change the text and images and you're good to
-                                    go.</p>
-                                <div class="btn-wrapper">
-                                    <base-button tag="a"
-                                                 href="https://demos.creative-tim.com/argon-design-system/docs/components/alerts.html"
-                                                 class="mb-3 mb-sm-0"
-                                                 type="info"
-                                                 icon="fa fa-code">
-                                        Components
-                                    </base-button>
-                                    <base-button tag="a"
-                                                 href="https://www.creative-tim.com/product/argon-design-system"
-                                                 class="mb-3 mb-sm-0"
-                                                 type="white"
-                                                 icon="ni ni-cloud-download-95">
-                                        Download HTML
-                                    </base-button>
-                                </div>
+                                <p class="lead  text-white">Seleccione los datos especificos para realizar una busqueda rápida respecto al turismo</p>
                             </div>
                         </div>
+                                              <section class="section section-lg pt-0">
+                        <div class="container">
+                            <card gradient="info"
+                                  no-body
+                                  shadow-size="lg"
+                                  class="border-0">
+                                <div class="p-5">
+                                    <div class="row align-items-center">
+                                        <div class="col-lg-9">
+<div class="container ct-example-row">
+  <div class="row">
+    <div class="col-sm">
+                                          <div class="form-group">
+                                            <label>Tipo de turismo :</label>
+                                            <select class="form-control" v-model="turismo.tipo">
+                                             <option selected="true" disabled="disabled">Turismo</option>
+                                             <option value="Cultural">Cultural</option>
+                                             <option value="Aventura">Aventura</option>
+                                            </select>
+                                          </div>
+    </div>
+    <div class="col-sm">
+                                          <div class="form-group">
+                                            <label>Región :</label>
+                                            <select class="form-control" v-model="turismo.region">
+                                             <option selected="true" disabled="disabled">Región</option>
+                                             <option value="Ica">Ica</option>
+                                             <option value="Piura">Piura</option>
+                                             <option value="Tacna"> Tacna</option>
+                                             <option value="Ayacucho">Ayacucho</option>
+                                             <option value="Huánuco">Huánuco</option>
+                                             <option value="Cuzco">Cuzco</option>
+                                             <option value="Cajamarca">Cajamarca</option>
+                                             <option value="Moquegua">Moquegua</option>
+                                             <option value="San Martín">San Martín</option>
+                                             <option value="Puno">Puno</option>
+                                             <option value="Apurímac">Apurímac</option>
+                                             <option value="Áncash">Áncash</option>
+                                            </select>
+                                          </div>
+    </div>
+    <div class="col-sm">
+                                          <div class="form-group">
+                                             <label for="exampleFormControlSelect1">Fecha :</label>
+                                                <base-input addon-left-icon="ni ni-calendar-grid-58">
+                                                    <flat-picker slot-scope="{focus, blur}"
+                                                                 @on-open="focus"
+                                                                 @on-close="blur"
+                                                                 :config="{allowInput: true}"
+                                                                 class="form-control datepicker"
+                                                                 v-model="turismo.fecha"
+                                                                 id="fecha"
+                                                                 >
+                                                    </flat-picker>
+                                                </base-input>
+                                          </div>
+    </div>
+  </div>
+</div>
+                                        </div>
+                                        <div class="col-lg-3 ml-lg-auto">
+                                            <base-button tag="a" type="white" block size="lg" @click="busquedaRapida">
+                                                Buscar
+                                            </base-button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </card>
+                        </div>
+                    </section>
                     </div>
                 </div>
             </section>
+            <!-- 1st Hero Variation -->
+<h1>hola</h1>
             <!-- 1st Hero Variation -->
         </div>
         <section class="section section-lg pt-lg-0 mt--200">
@@ -340,30 +394,6 @@
                 </div>
             </div>
         </section>
-        <section class="section section-lg pt-0">
-            <div class="container">
-                <card gradient="warning"
-                      no-body
-                      shadow-size="lg"
-                      class="border-0">
-                    <div class="p-5">
-                        <div class="row align-items-center">
-                            <div class="col-lg-8">
-                                <h3 class="text-white">We made website building easier for you.</h3>
-                                <p class="lead text-white mt-3">I will be the leader of a company that ends up being
-                                    worth billions of dollars, because I got the answers. I understand culture.</p>
-                            </div>
-                            <div class="col-lg-3 ml-lg-auto">
-                                <base-button tag="a" href="https://www.creative-tim.com/product/vue-argon-design-system"
-                                             type="white" block size="lg">
-                                    Download Vue
-                                </base-button>
-                            </div>
-                        </div>
-                    </div>
-                </card>
-            </div>
-        </section>
         <section class="section section-shaped my-0 overflow-hidden">
             <div class="shape shape-style-3 bg-gradient-default shape-skew">
                 <span></span>
@@ -500,8 +530,30 @@
 </template>
 
 <script>
+import flatPicker from "vue-flatpickr-component";
+import "flatpickr/dist/flatpickr.css";
 export default {
-  name: "home",
-  components: {}
+  name: "eventos",
+  components: {
+    flatPicker
+  },
+    data(){
+        return {
+              turismo: {
+                tipo: "Turismo",
+                region: "Región",
+                fecha: "1950-01-01"
+              },
+              dates: {
+                simple: "1950-01-01"
+              }
+        }
+    },
+    methods: {
+        busquedaRapida() {
+            alert("Detalles :" + this.turismo.tipo +"\n"+ this.turismo.region +"\n"+ this.turismo.fecha)
+        }
+    }
+
 };
 </script>

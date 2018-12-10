@@ -7,6 +7,7 @@ import Landing from "./views/Landing.vue";
 import Login from "./views/Login.vue";
 import Register from "./views/Register.vue";
 import Profile from "./views/Profile.vue";
+import Evento from "./views/Eventos.vue";
 
 Vue.use(Router);
 
@@ -58,7 +59,16 @@ export default new Router({
         default: Profile,
         footer: AppFooter
       }
-    }
+    },
+    {
+      path: "/eventos",
+      name: "eventos",
+      components: {
+        header: AppHeader,
+        default: Evento,
+        footer: AppFooter
+      }
+    },
   ],
   scrollBehavior: to => {
     if (to.hash) {
