@@ -149,9 +149,20 @@
                                         <badge type="primary" rounded>{{even.destino}}</badge>
                                         <badge type="primary" rounded>11 personas</badge>
 
+                             <div class="container">  
+                                <div class="row">
+                                  <div class="col">
                                     <base-button tag="a" href="#" type="info" class="mt-4">
                                         Mas detalle
                                     </base-button>
+                                  </div>
+                                  <div class="col">
+                                    <base-button tag="a" href="#" type="success" class="mt-4">
+                                        Unirse
+                                    </base-button>
+                                  </div>
+                                </div>
+                            </div>
                                 </card>
                             </div>
                         </div>
