@@ -1,12 +1,12 @@
 <template>
     <header class="header-global">
         <base-nav class="navbar-main" transparent type="" effect="light" expand>
-            <a slot="brand" class="navbar-brand mr-lg-5" href="/"><strong id="title">TUTURIST</strong>
+            <a slot="brand" class="navbar-brand mr-lg-5" href="/nosotros"><strong id="title">TUTURIST</strong>
             </a>
 
             <div class="row" slot="content-header" slot-scope="{closeMenu}">
                 <div class="col-6 collapse-brand">
-                    <a href="/">
+                    <a href="/nosotros">
                         <strong id="subtitle">TUTURIST</strong>
                     </a>
                 </div>
@@ -123,12 +123,10 @@
                 <base-dropdown tag="li" class="nav-item">
                     <a slot="title" href="#" class="nav-link" data-toggle="dropdown" role="button">
                         <i class="ni ni-collection d-lg-none"></i>
-                        <span class="nav-link-inner--text">Examples</span>
+                        <span class="nav-link-inner--text">Acerca de</span>
                     </a>
-                    <router-link to="/landing" class="dropdown-item">Landing</router-link>
-                    <router-link to="/profile" class="dropdown-item">Profile</router-link>
-                    <router-link to="/login" class="dropdown-item">Login</router-link>
-                    <router-link to="/register" class="dropdown-item">Register</router-link>
+                    <router-link to="/nosotros" class="dropdown-item">Nosotros</router-link>
+                    <router-link to="/contactenos" class="dropdown-item">Contáctenos</router-link>
                 </base-dropdown>
             </ul>
             <ul class="navbar-nav align-items-lg-center ml-lg-auto">

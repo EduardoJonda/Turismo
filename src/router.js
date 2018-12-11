@@ -8,6 +8,8 @@ import Login from "./views/Login.vue";
 import Register from "./views/Register.vue";
 import Profile from "./views/Profile.vue";
 import Evento from "./views/Eventos.vue";
+import Nosotros from "./views/Nosotros.vue";
+import Contactenos from "./views/Contactenos.vue";
 
 Vue.use(Router);
 
@@ -69,6 +71,33 @@ export default new Router({
         footer: AppFooter
       }
     },
+    {
+      path: "/nosotros",
+      name: "nosotros",
+      components: {
+        header: AppHeader,
+        default: Nosotros,
+        footer: AppFooter
+      }
+    },
+    {
+      path: "/contactenos",
+      name: "contactenos",
+      components: {
+        header: AppHeader,
+        default: Contactenos,
+        footer: AppFooter
+      }
+    },
+    {
+      path: "/consultas",
+      name: "consultas",
+      components: {
+        header: AppHeader,
+        default: null,
+        footer: AppFooter
+      }
+    },  
   ],
   scrollBehavior: to => {
     if (to.hash) {

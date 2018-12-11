@@ -18,7 +18,7 @@
                           body-classes="px-lg-5 py-lg-5"
                           class="border-0">
                         <template>
-                            <div class="text-muted text-center mb-3">
+                            <div class="text-muted text-center">
                                <h3>Registro</h3>
                             </div>
                             <div class="btn-wrapper text-center">
@@ -26,12 +26,7 @@
                                     <div class="container ct-example-row">
                                       <div class="row">
                                         <div class="col-sm">
-                                        <base-button type="neutral">
-                                            <img slot="icon" src="img/icons/common/github.svg">
-                                            Github
-                                        </base-button>
-                                        </div>
-                                        <div class="col-sm">
+                                            <br>
                                         <base-button type="neutral">
                                             <img slot="icon" src="img/icons/common/google.svg">
                                             Google
@@ -40,6 +35,7 @@
                                       </div>
                                     </div>
                             </div>
+                            <hr>
                         </template>
                            <hr>
                         <template>

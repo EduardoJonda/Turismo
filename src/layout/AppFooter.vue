@@ -41,13 +41,13 @@
                 <div class="col-md-6">
                     <ul class="nav nav-footer justify-content-end">
                         <li class="nav-item">
-                            <a class="nav-link">Nosotros</a>
+                            <a href="/nosotros" class="nav-link">Nosotros</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link">Acerca de</a>
+                            <a href="/contactenos" class="nav-link">Contáctenos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link">MIT License</a>
+                            <a class="nav-link">FQ</a>
                         </li>
                     </ul>
                 </div>
