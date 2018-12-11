@@ -17,17 +17,17 @@
                 </div>
                 <div class="row row-grid mt-5">
                     <div class="col-lg-4">
-                        <icon name="ni ni-settings" size="lg" gradient="white" shadow round color="primary"></icon>
+                        <icon name="fa fa-building" size="lg" gradient="white" shadow round color="primary"></icon>
                         <h5 class="text-white mt-3">Misión</h5>
                         <p class="text-white mt-3">Aplicar las ultimas tecnologías y ofrecer un servicio de calidad para que nuestros usurios se encuentren satisfecho con nuestra plataforma y tengan una mejor experiencia en el turismo.</p>
                     </div>
                     <div class="col-lg-4">
-                        <icon name="ni ni-ruler-pencil" size="lg" gradient="white" shadow round color="primary"></icon>
+                        <icon name="fa fa-eye" size="lg" gradient="white" shadow round color="primary"></icon>
                         <h5 class="text-white mt-3">Visión</h5>
                         <p class="text-white mt-3">Crecer y aplicar nuestro modelo de negocio a nivel internacional en los países de latinoamerica para incentivar el turismo hacia estos países y obtener valores reconocimientos por los resultados de nuestras plataforma.</p>
                     </div>
                     <div class="col-lg-4">
-                        <icon name="ni ni-atom" size="lg" gradient="white" shadow round color="primary"></icon>
+                        <icon name="fa fa-trophy" size="lg" gradient="white" shadow round color="primary"></icon>
                         <h5 class="text-white mt-3">Fortalezas</h5>
                         <ul>
                             <li class="text-white">Somos innovadores</li>

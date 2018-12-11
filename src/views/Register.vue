@@ -457,6 +457,7 @@ export default {
         Firebase.auth().createUserWithEmailAndPassword(this.usuario.correo, this.usuario.password).then(
             function(user) {
                 alert("Se registro satisfactoriamente");
+                window.location.replace("/login");
             },
             function(err) {
                 alert('Hubo un error' + err.message);

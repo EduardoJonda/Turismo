@@ -124,8 +124,8 @@ export default {
                     // usersRef.push(this.usuario);
                     Firebase.auth().signInWithEmailAndPassword(this.usuario.correo, this.usuario.password).then(
                     function(user) {
-                        alert("Well done!");
-                        window.location.replace("/landing");
+                        alert("Bienvenido a Tuturist!");
+                        window.location.replace("/eventos");
                     },
                     function(err) {
                         alert("El correo o constraseña es inválido");
